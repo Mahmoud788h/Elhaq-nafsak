@@ -42,7 +42,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تحفيز النفس</title>
+    <title>جاهد نفسك</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome CDN for icons -->
@@ -318,4 +318,92 @@
         });
     </script>
 </body>
+        <!-- HTML for the button and popup -->
+<button class="help-btn" onclick="toggleHelp()">?</button>
+<div id="help-popup" class="help-popup">
+  <div class="help-content">
+    <span class="close-btn" onclick="toggleHelp()">&times;</span>
+    <h2>ما الهدف من هذا الموقع؟</h2>
+    <p>هذا الموقع مصمم ليكون <strong>رفيقك في رحلة التقرب إلى الله</strong> والابتعاد عن الذنوب. لو حسيت إنك وصلت للحظة ضعف أو شهوة قوية، أو قربت تعمل ذنب، اضغط على زر <strong>"إبدأ"</strong> عشان تتذكر عظمة الله وتستعيد قوتك.</p>
+    <p>ولو حسيت إن الذنب قرّب جدًا، ادخل على صفحة <strong>"أسكت شيطانك"</strong> عشان تساعدك تقاوم وترجع لطريق الطاعة.</p>
+    <p><strong>هدفنا:</strong> إنك تستشعر عظمة الله، وتدرك قد إيه الذنب خطير لو عملته قدام ربنا. الموقع مناسب لكل الأعمار، وهدفه إنك تحاول تبقى <strong>عبدًا لله</strong> ما يعصيه، أو على الأقل تقلل من المعاصي. حاول تلغي فكرة "أنا هرجع للذنب تاني"، وجاهد نفسك عشان بإذن الله ما ترجعش لأي ذنب!</p>
+    <p class="highlight">معانا، هتبدأ رحلة جهاد النفس، وهتكتشف إنك قادر تبقى أقوى من الشيطان بإذن الله!</p>
+  </div>
+</div>
+
+<!-- CSS for styling -->
+<style>
+  .help-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #4CAF50;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  .help-btn:hover {
+    transform: scale(1.1);
+  }
+  .help-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+  }
+  .help-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 20px;
+    position: relative;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+  }
+  .help-content h2 {
+    color: #4CAF50;
+    margin-bottom: 15px;
+  }
+  .help-content p {
+    margin: 10px 0;
+    color: #333;
+  }
+  .highlight {
+    font-weight: bold;
+    color: #4CAF50;
+    font-style: italic;
+  }
+  .help-content strong {
+    color: #2e7d32;
+  }
+</style>
+
+<!-- JavaScript for toggling the popup -->
+<script>
+  function toggleHelp() {
+    var popup = document.getElementById("help-popup");
+    popup.style.display = popup.style.display === "block" ? "none" : "block";
+  }
+</script>
 </html>
